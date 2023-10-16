@@ -21,6 +21,11 @@ first, last = name.split(" ") #creating first variable and last variable to stor
 print(f"Hello, {first}")
 print(f"Welcome, {last}")
 
+# DATATYPE: int --> Integers ~ numbers from negative infinity to positive infinitice, whole numbers ~check out the calculator.py file
+
+# DATATYPE: float --> it is a number with a decimal point
+
+
 # USING MORE THAN ONE DATATYPE AT THE TIME
 # DATATYPES: .strip() and .title()
 name = input("what's your name? ") # ask user for their name and store it in VARIABLE "name"

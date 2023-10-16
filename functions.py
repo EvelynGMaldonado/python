@@ -34,3 +34,31 @@ print("Hello, ", name, sep="*") #print the word Hello using comma to separate ar
 print('Hello, "friend"') #use single quotes for the string and double quotes for what I want to print double quoted.
 print("Hello, \"friend\"") #adding back slashes in front of our double inner quotes for the computer to realize that those inner quotes are not quotes to start and finish the thought, but they are literal quotes.
 
+# FUNCTION: int()
+x = input("what's x? ") # the user input, even if loooks like a number it is a string
+y = input("what's y? ") # the user input, even if loooks like a number it is a string
+z = int(x) + int(y) # int() converts a string to an integer
+print(z)
+    #or
+x = int(input("what's x? "))
+y = int(input("what's y? "))
+print(x + y)
+    #or
+print(int(input("what's x? ")) + int(input("what's y? ")))
+
+#FUNCTION float()
+x = float(input("what's x? ")) #user string input is converted to a number with a decimal point
+y = float(input("what's y? "))
+print(x + y)
+
+#FUNCTION round()
+x = float(input("what's x? ")) #user string input is converted to a number with a decimal point
+y = float(input("what's y? "))
+z = round(x + y)
+print(z)
+    #or
+x = float(input("what's x? ")) #user string input is converted to a number with a decimal point
+y = float(input("what's y? "))
+z = round(x + y)
+print(f"{z:,}") #it is a helper to separate every 3 digits by a comma
+
