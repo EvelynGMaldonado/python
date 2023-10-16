@@ -62,3 +62,12 @@ y = float(input("what's y? "))
 z = round(x + y)
 print(f"{z:,}") #it is a helper to separate every 3 digits by a comma
 
+#FUNCTION return 
+def main():
+    x = int(input("what's x? "))
+    print("x squared is", square(x))
+
+def square(number):
+    return number * number
+
+main()
