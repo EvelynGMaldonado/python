@@ -40,6 +40,7 @@ match name:
         print("Who? ")
 
     #OR
+#using the MATCH, CASE, |, and CASE _ technique
 name = input("What's your name? ")
 match name:
     case "Harry" | "Hermione" | "Ron": 

@@ -8,3 +8,7 @@
         --> it is represented by square brackets [] and the values are separated by comma (,).
 
 4. while True --> a way of deliverately inducing a loop that by default is going to go forever.
+
+5. Dictionaries (dict) --> data structure that allows us to associate one value with another. 
+                      --> it is represented by curly braces {}, and it contains keys and values
+                      --> {"key": "value"} associated by colon (:), and separated by comma (,).

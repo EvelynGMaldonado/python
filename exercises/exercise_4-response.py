@@ -44,19 +44,19 @@ def main(): #defining the main function
     meow() #calling the meow() function
 
 def meow(): #defining the meow() function
-    while True:
+    while True: #starting the infinite loop
         n = int(input('How many times do you want the cat to "meow" ? ')) #creating the variable
         if n < 0:
             continue
         else:
-            positive_meow(n)
+            positive_meow(n) #calling the positive_meow() function
             break
 
-def positive_meow(positiveNumber):
-    for _ in range(positiveNumber):
+def positive_meow(positiveNumber): #defining the positive_meow() method
+    for _ in range(positiveNumber): #for loop that prints the correct number of "meoow"
         print("meooow")
 
-main()
+main() #calling the main() function
 
 
     #OR
