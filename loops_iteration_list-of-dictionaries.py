@@ -1,3 +1,4 @@
+#LIST OF DICTIONARIES: We have a list of students, and each student is a dictionary.
 students = [
     {"name": "Evelyn", "group": "Group A", "grade": "First"},
     {"name": "Wendy", "group": "Group B", "grade": "Second"},
