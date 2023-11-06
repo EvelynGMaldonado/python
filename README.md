@@ -12,3 +12,7 @@
 5. Dictionaries (dict) --> data structure that allows us to associate one value with another. 
                       --> it is represented by curly braces {}, and it contains keys and values
                       --> {"key": "value"} associated by colon (:), and separated by comma (,).
+
+6. Return --> is even stronger than break, it won't only break out of a loop, but it will also return a value for us.
+
+7. NameError --> variables that we meant to define but somehow we didn't.

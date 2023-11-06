@@ -76,3 +76,69 @@ def get_int():
     return x #we need to return a value when inventing our own functions
 
 main()
+
+    #OR
+    #FIX the NameError having our own function and using: WHILE TRUE, TRY, EXCEPT, ELSE, RETURN
+def main():
+    x = get_int()
+    print(f"x is {x}") 
+
+def get_int():
+    while True: #inducing infinite loop
+        try: # tells python to try to do something 
+            x = int(input("What is x? "))
+        except ValueError: #tells python what do I want to do in exceptional cases: when the input from the user is not a number.
+            print("x is not an integer, please enter a number")
+        else:
+            return x #we need to return a value when inventing our own functions
+
+main()
+
+    #OR 
+    #FIX the NameError having our own function and using: WHILE TRUE, TRY STATEMENT & RETURN, EXCEPT, PASS
+def main():
+    x = get_int()
+    print(f"x is {x}") 
+
+def get_int():
+    while True: #inducing infinite loop
+        try: # tells python to try to do something 
+            x = int(input("What is x? "))
+            return x #we need to return a value when inventing our own functions
+        except ValueError: #tells python what do I want to do in exceptional cases: when the input from the user is not a number.
+            pass #it will detect the error but it will silently ignore it.
+
+main()
+
+    #OR 
+    #IMPLEMENTATION OF get_int() using: TRY STATEMENT & RETURN, WHILE TRUE, EXCEPT
+def main():
+    x = get_int()
+    print(f"x is {x}") 
+
+def get_int():
+    while True: #inducing infinite loop
+        try: # tells python to try to do something 
+            x = int(input("What is x? "))
+            return x #we need to return a value when inventing our own functions
+        except ValueError: #tells python what do I want to do in exceptional cases: when the input from the user is not a number.
+            print("x is not an integer, please enter a number")
+
+main()
+
+    #OR
+    #Taking parameters --> prompt ~ helps us to make some more reusable code
+def main():
+    x = get_int("What's x? ") #parameter to get_int() is provided by the caller
+    print(f"x is {x}") 
+
+def get_int(prompt): #prompt is the parameter taked by my get_int() function
+    while True: #inducing infinite loop
+        try: # tells python to try to do something 
+            x = int(input(prompt)) #passing to input whatever the caller has provided as a prompt
+            return x #we need to return a value when inventing our own functions
+        except ValueError: #tells python what do I want to do in exceptional cases: when the input from the user is not a number.
+            print("x is not an integer, please enter a number")
+
+main()
+
