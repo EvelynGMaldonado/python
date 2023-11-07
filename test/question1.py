@@ -3,12 +3,12 @@ Create a solution that accepts three integer inputs representing the number of t
 Output the total distance traveled to two decimal places given the following miles per employee commute to the job site. 
 Output the total distance traveled to two decimal places given the following miles per employee commute to the job site:
 
-Employee A: 15.62 miles
-Employee B: 41.85 miles
-Employee C: 32.67 miles
+    Employee A: 15.62 miles
+    Employee B: 41.85 miles
+    Employee C: 32.67 miles
 
 The solution output should be in the format
-Distance: total_miles_traveled
+    Distance: total_miles_traveled
 
 Sample Input/Output:
     If the input is
@@ -25,6 +25,7 @@ Input to program:
 2
 3
 *
+
 '''
 
 distanceA = 15.62
