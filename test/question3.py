@@ -20,3 +20,23 @@ Input to program:
 *
 
 '''
+
+#use built-in function type()
+#get name by using the built-in attribute __name__
+#solution accepts integer input representing list element index
+#solution outputs data type of list element based on input index value
+
+various_data_types = [516, 112.49, True, "meow", ("Western", "Governors", "University"), {"apple": 1, "pear": 5}]
+
+index_value = int(input("Select a number from 0-5: "))
+
+index_variable = various_data_types[index_value]
+print(f"index_variable: {index_variable}")
+
+data_type_by_index = type(index_variable)
+print(f"data_type_by_index: {data_type_by_index}")
+
+data_type_name_by_index = type(index_variable).__name__
+print(f"data_type_name_by_index: {data_type_name_by_index}")
+
+print(f"Element {index_value}: {data_type_name_by_index}")
