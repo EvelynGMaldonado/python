@@ -24,8 +24,22 @@ Input to program:
 
 '''
 
-ouncesUserInput = int(input())
+    #1 ton = 2000 pounds = 32000 ounces
+one_ton_to_ounces = 32000
 
-totalTons = 1
-totalPounds =1
-totalOunces =1
+    #1 pound  = 16 ounces
+one_pound_to_ounces = 16
+
+
+enter_ounces = int(input("Enter the number of ounces you want to convert: ")) #32035
+
+remainding_ounces_after_tons = enter_ounces % one_ton_to_ounces #35
+total_tons = int((enter_ounces - remainding_ounces_after_tons) / one_ton_to_ounces) # 1
+
+remainding_ounces_after_pounds = remainding_ounces_after_tons % one_pound_to_ounces #3
+total_pounds = int((remainding_ounces_after_tons - remainding_ounces_after_pounds) / one_pound_to_ounces) #2
+
+total_ounces = remainding_ounces_after_pounds
+
+
+print(f"Tons: {total_tons}\nPounds: {total_pounds}\nOunces: {total_ounces}")
