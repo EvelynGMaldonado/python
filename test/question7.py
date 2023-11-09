@@ -21,3 +21,23 @@ Input to program:
 *
 
 '''
+
+
+#solution accepts an integer input
+#solution outputs Boolean value indicating if integer input is greater than the maximum value when compared to predef_list
+
+predef_list = [4, -27, 15, 33, -10]
+
+valueA = int(input("Please enter a number: "))
+
+#ordering the list
+predef_list.sort()
+
+#getting the max value of the list
+list_max_value = predef_list[-1]
+
+
+if valueA > list_max_value:
+    print("Greater Than Max? True")
+else:
+    print("Greater Than Max? False")
