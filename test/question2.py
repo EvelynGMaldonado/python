@@ -23,6 +23,9 @@ Input to program:
 *
 
 '''
+#there are 16 ounces in a pound and 2000 pounds in a ton
+#solution accepts an integer value representing any number of ounces
+#solution outputs the converted tons, pounds, and ounces represented by the input value of ounces
 
     #1 ton = 2000 pounds = 32000 ounces
 one_ton_to_ounces = 32000
