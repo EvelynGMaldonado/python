@@ -21,6 +21,9 @@ HINT --> modulo (%) and floored division (//) may be used
 
 '''
 
+#hint: modulo (%) and floored division (//) may be used
+#solution accepts a 9-digit integer representing an unformatted student identification number (i.e.,"5417543010")
+#solution outputs formatted student identification number as a string (i.e.,"541-75-3010")
 
 unformatted_studentID  = input("Enter a nine digit number: ")
 
