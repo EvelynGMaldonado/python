@@ -1,14 +1,22 @@
-frameworks = ["Django", "Flask", "CherryPy", "Bottle", "Web2Py", "TurboGears"]
+unformatted_studentID  = input("Enter a nine digit number: ")
 
-for i in range (len(frameworks)):
-    try:
-        i_value = int(input("Enter a number: "))
-        print (frameworks[i_value])
-        break
+if len(unformatted_studentID ) == 9 and unformatted_studentID.isdigit():
+    uStudentID_to_string = str(unformatted_studentID)
+    #print(unformatted_studentID)
 
-    except ValueError:
-        print("Error Value.")
+    #create 3 substrings from uStudentID_to_string which now has 11 characters and 11 indexes: ea "123456789"
+    sstring1 = uStudentID_to_string[:3]
+    print(sstring1)
+    
+    sstring2 = uStudentID_to_string[3:5]
+    print(sstring2)
 
-    except:
-        print('Error') #Error: Index out of range
-        break
+    sstring3 = uStudentID_to_string[5:]
+    print(sstring3)
+
+    #print("-".join([sstring1, sstring2, sstring3]))
+
+    studentID_final = "-".join([sstring1, sstring2, sstring3])
+    print(studentID_final)
+else:
+    print("You must enter a 9 digits number")
