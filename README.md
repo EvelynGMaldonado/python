@@ -23,4 +23,9 @@
                  -->[-1] access to the last item of the list
                  -->[-2] access to the second last item of the list
 
-9. 
+9. Rounding floats to two decimal places. 
+        e.a. 
+                x = 3.14159265
+                y = round(x, 2)
+
+10. 
