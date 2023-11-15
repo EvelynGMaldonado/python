@@ -29,3 +29,21 @@ input1.csv
 *
 
 '''
+
+#import csv module and call open(), reader()
+#solution accepts input identifying name of CSV file (i.e., "input1.csv")
+#solution outputs each row of CSV file contents as a dictionary of elements
+
+
+import csv
+
+file_name = str(input())
+
+dictionary_output = {}
+
+with open(file_name, "r") as file:
+    data_file = csv.reader(file, delimiter=",")
+    
+    for row in data_file:
+        dictionary_output = {row[column].strip(): row[column + 1].strip() for column in range(0, len(row), 2)}
+        print(dictionary_output)
