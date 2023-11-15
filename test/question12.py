@@ -31,7 +31,34 @@ WordTextFile1.txt
 #solution accepts file input to insert sentence composed of file content into text file on a new line
 #solution outputs the text file contents including the new sentence
 
-import errno
+# EASY WAY REQUESTED IN THE PREASSESMENT
+file = open(file_name, "r")
+for row in file:
+    rows = row.rstrip()
+    concat_list_of_rows.append(rows)
+#print(concat_list_of_rows)
+
+all_rows_sentence = " ".join(concat_list_of_rows)
+#print(all_rows_sentence)
+
+file.close()
+
+#print(concat_list_of_rows)
+#print(all_rows_sentence)
+
+
+file = open(file_name, "a")
+file.write(f"\n{all_rows_sentence}")
+file.close()
+
+file = open(file_name, "r")
+print(file.read())
+file.close()
+
+
+
+# ****MORE COMPLETE, USING MAIN() AND ADDITIONAL FUNCTIONS****
+import errno  #it got authomatically imported so I don't know if is needed - need to check!
 
 
 def main():
@@ -160,134 +187,3 @@ def result(line_of_lines_string, path_to_file, file_name):
 
 main()    
 
-
-
-
-
-
-
-
-
-
-
-
-'''
-
-file_name = str(input("Please enter the file name: "))
-path_to_file = "C:/Users/Evelyn/Code/python/test"
-file_content = ["Word1 \n", "Word2 \n", "Word3 \n"]
-
-try:
-    file = open(f"{path_to_file}/{file_name}", "r")
-    file.read()
-    print(file.tell())
-    is_empty = file.tell()
-    if is_empty == 0:
-        file.writelines(file_content)
-        print(file.read())
-
-        count = 0
-        while True:
-            count += 1
-            line = file.readline()
-
-            final_sentence = " ".join(line)
-            file.write(f"{final_sentence}")
-
-            if not line:
-                break
-        
-    else:
-        print(file.read())
-        count = 0
-        while True:
-            count += 1
-            line = file.readline()
-
-            final_sentence = " ".join(line)
-            file.write(f"{final_sentence}")
-
-            if not line:
-                break
-
-
-except FileNotFoundError:
-    # #"w" write only --> creates a file if the file does not exist
-    file = open(f"{path_to_file}/{file_name}", "w")
-    file.writelines(file_content)
-    file.close()
-
-    file = open(f"{path_to_file}/{file_name}", "r")
-    #file.read()
-    rows_list = file.read()
-    #print(rows_list)
-    #print(file.read())
-    #file.tell()
-    #print(file.tell())
-    file_empty = file.tell()
-    print(file_empty)
-    if file_empty == 0:
-        print("exception and file_empty")
-    #     file1.writelines(file_content)
-    #     print(file1.read())
-
-    #     count = 0
-    #     while True:
-    #         count += 1
-    #         line = file1.readline()
-
-    #         final_sentence = " ".join(line)
-    #         file1.write(f"{final_sentence}")
-
-    #         if not line:
-    #             break
-        
-    else:
-        print("exception and file is not empty")
-        print(rows_list)
-        file.close()
-
-        file = open(f"{path_to_file}/{file_name}", "a")
-        Lines = file.readline()
-        count = 0 
-        for line in Lines:
-            count += 1
-            final_sentence = " ".join(line)
-            print(final_sentence)
-
-        file.write(f"{final_sentence}")
-        print(final_sentence)
-        file.close()
-
-        file = open(f"{path_to_file}/{file_name}", "r")
-        print(file.read())
-
-    #     print(file1.read())
-    #     count = 0
-    #     while True:
-    #         count += 1
-    #         line = file1.readline()
-
-    #         final_sentence = " ".join(line)
-    #         file1.write(f"{final_sentence}")
-
-    #         if not line:
-    #             break
-
-
-
-
-
-
-# file_opener = open(f'{file_name}', "w")
-
-# #writelines() --> used to insert text in the file
-# file_opener.writelines(file_content)
-
-# file_opener.close()
-
-# #read the file and print its content
-# file_reader = open("file_opener", "r")
-# print(file_reader.read())
-
-'''
