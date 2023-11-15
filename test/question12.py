@@ -31,6 +31,9 @@ WordTextFile1.txt
 #solution accepts file input to insert sentence composed of file content into text file on a new line
 #solution outputs the text file contents including the new sentence
 
+import errno
+
+
 def main():
     file_name = str(input("Please enter the file name: "))
     path_to_file = "C:/Users/Evelyn/Code/python/test"
@@ -47,12 +50,24 @@ def file_exists(file_name, path_to_file, file_content):
 
         file.close()
 
-        is_empty(file_size, file_content)
+        #is_empty(file_size, file_content, path_to_file, file_name)
+        has_content(file_size, path_to_file, file_name)
 
         return file_size
 
     except FileNotFoundError:
         create_file(path_to_file, file_name, file_content)
+
+def has_content(file_size, path_to_file, file_name):
+    if file_size >= 1:
+        print("file exists already and size >= 1")
+        file = open(f"{path_to_file}/{file_name}", "r")
+        existent_rows = file.read()
+        print(existent_rows)
+        file.close()
+
+    else:
+        print("something is wrong and file is 0 characters ~ empty")
 
 
 def create_file(path_to_file, file_name, file_content):
@@ -88,10 +103,10 @@ def is_empty(file_size, path_to_file, file_name, file_content):
     else:
         print("exception and file is not empty")
         file_iteration(path_to_file, file_name)
+
     
 
 def file_iteration(path_to_file, file_name):
-    #print_single_rows(path_to_file, file_name)
     print_concatenated_rows(path_to_file, file_name)
     print_single_rows(path_to_file, file_name)
 
