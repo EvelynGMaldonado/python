@@ -42,8 +42,8 @@ file_name = str(input())
 dictionary_output = {}
 
 with open(file_name, "r") as file:
-    data_file = csv.reader(file, delimiter=",")
-    
+    data_file = csv.reader(file)
     for row in data_file:
+        #print(row)
         dictionary_output = {row[column].strip(): row[column + 1].strip() for column in range(0, len(row), 2)}
         print(dictionary_output)
