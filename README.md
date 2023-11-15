@@ -28,4 +28,25 @@
                 x = 3.14159265
                 y = round(x, 2)
 
-10. 
+10. Try, Except, Else, and Finally Syntax -->
+                                                try:
+                                                        # Some Code.... 
+                                                except:
+                                                        # optional block
+                                                        # Handling of exception (if required)
+                                                else:
+                                                        # execute if no exception
+                                                finally:
+                                                        # Some code .....(always executed)
+
+11. Files access modes:
+        Access modes govern the type of operations possible in the opened file. It refers to how the file will be used once its opened. These modes also define the location of the File Handle in the file. File handle is like a cursor, which defines from where the data has to be read or written in the file. There are 6 access modes in python.
+                
+                --> Read Only (‘r’) : Open text file for reading. The handle is positioned at the beginning of the file. If the file does not exists, raises the I/O error. This is also the default mode in which a file is opened.
+                --> Read and Write (‘r+’): Open the file for reading and writing. The handle is positioned at the beginning of the file. Raises I/O error if the file does not exist.
+                --> Write Only (‘w’) : Open the file for writing. For the existing files, the data is truncated and over-written. The handle is positioned at the beginning of the file. Creates the file if the file does not exist.
+                --> Write and Read (‘w+’) : Open the file for reading and writing. For an existing file, data is truncated and over-written. The handle is positioned at the beginning of the file.
+                --> Append Only (‘a’): Open the file for writing. The file is created if it does not exist. The handle is positioned at the end of the file. The data being written will be inserted at the end, after the existing data.
+                --> Append and Read (‘a+’) : Open the file for reading and writing. The file is created if it does not exist. The handle is positioned at the end of the file. The data being written will be inserted at the end, after the existing data.
+
+12. 
