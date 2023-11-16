@@ -53,3 +53,27 @@ string_sum_value = str(value1) + str(value2) + str(value3) + str(value4) + str(v
 print(f"Integer: {integer_sum_value}")
 print(f"Float: {float_sum_value}")
 print(f"String: {string_sum_value}")
+
+
+    #OR
+#solution accepts five integer inputs
+#solution outputs three sums of input values; convert before calculating sum
+#first output: sum of five inputs maintained as integer values
+#second output: sum of five inputs converted to float values
+#third output: sum of five inputs converted to string values (concatenate)
+
+try:
+    value_1 = int(input("Enter value 1: "))
+    value_2 = int(input("Enter value 2: "))
+    value_3 = int(input("Enter value 3: "))
+    value_4 = int(input("Enter value 4: "))
+    value_5 = int(input("Enter value 5: "))
+    
+    integer_sum_value = int(value_1 + value_2 + value_3 + value_4 + value_5)
+    float_sum_value = float(value_1) + float(value_2) + float(value_3) + float(value_4) + float(value_5)
+    string_sum_value = str(value_1) + str(value_2) + str(value_3) + str(value_4) + str(value_5)
+    
+    print(f"Integer: {integer_sum_value}\nFloat: {float_sum_value}\nString: {string_sum_value}")
+    
+except ValueError:
+    print("Please enter only whole numbers")
