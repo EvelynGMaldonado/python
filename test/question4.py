@@ -47,3 +47,21 @@ h = int(input("Enter the height measurement in meters: "))
 area_value = float(((b1 + b2) / 2) * h)
 
 print(f"Trapezoid area: {area_value} square meters")
+
+    #OR
+#solution accepts three integer values representing base and height measurements of a trapezoid
+#first and second integers represent base 1 and base 2; third integer represents height 
+#solution outputs the trapezoid area in square meters using formula A = ½(b1+b2)h
+
+
+try:
+    b1 = int(input("Enter the base 1 measurement in meters: "))
+    b2 = int(input("Enter the base 2 measurement in meters: "))
+    h = int(input("Enter the height measurement in meters: "))
+    
+    area_value = float(((b1 + b2) / 2) * h)
+    
+    print(f"Trapezoid area: {area_value} square meters")
+    
+except ValueError:
+    print("Please enter only whole and positive numbers")
