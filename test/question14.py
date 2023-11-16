@@ -28,3 +28,29 @@ Input to program:
 *
 
 '''
+
+#import math module and call factorial()
+#solution accepts integer input
+#solution outputs the factorial of the integer input 
+#solution outputs Boolean identification of whether the factorial is >100
+
+import math
+
+
+
+try:
+    number_check = int(input("Enter a whole positive number: "))
+    
+    factorial_value = math.factorial(number_check)
+    
+    print(factorial_value)
+    
+    if factorial_value > 100:
+        print("True")
+    else:
+        print("False")
+    
+except ValueError:
+    print("Invalid input. Please enter a valid positive number")
+    
+
