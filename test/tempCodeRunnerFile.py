@@ -1,19 +1,19 @@
-employeeA = 15.62
-employeeB = 41.85
-employeeC = 32.67
+various_data_types = [516, 112.49, True, "meow", ("Western", "Governors", "University"), {"apple": 1, "pear": 5}]
 
 try:
-    timesA = int(input("Enter number of times: "))
-    timesB = int(input("Enter number of times: "))
-    timesC = int(input("Enter number of times: "))
+    index_value = int(input("Select a number from 0-5: "))
+    print(index_value)
     
-    total_miles_A = round((employeeA * timesA), 2)
-    total_miles_B = round((employeeB * timesB), 2)
-    total_miles_C = round((employeeC * timesC), 2)
+    element_by_index = various_data_types[index_value]
+    print(element_by_index)
     
-    total_miles_traveled = total_miles_A + total_miles_B + total_miles_C
+    data_type = type(element_by_index).__name__
+    print(data_type)
     
-    print(f"Distance: {total_miles_traveled} miles")
+    print(f"Element {index_value}: {data_type}")
     
 except ValueError:
-    print("Invalid input. Please enter a valid positive number")
+    print("Please enter only numbers")
+
+except IndexError:
+    print("Index is out of range, please select a number from 0-5")

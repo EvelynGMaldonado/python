@@ -51,7 +51,7 @@ print(f"Element {index_value}: {data_type_name_by_index}")
 various_data_types = [516, 112.49, True, "meow", ("Western", "Governors", "University"), {"apple": 1, "pear": 5}]
 
 try:
-    index_value = int(input())
+    index_value = int(input("Select a number from 0-5: "))
     print(index_value)
     
     element_by_index = various_data_types[index_value]
@@ -64,3 +64,6 @@ try:
     
 except ValueError:
     print("Please enter only numbers")
+
+except IndexError:
+    print("Index is out of range, please select a number from 0-5")
