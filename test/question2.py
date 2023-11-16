@@ -46,3 +46,30 @@ total_ounces = remainding_ounces_after_pounds
 
 
 print(f"Tons: {total_tons}\nPounds: {total_pounds}\nOunces: {total_ounces}")
+
+
+    #OR
+#there are 16 ounces in a pound and 2000 pounds in a ton
+#solution accepts an integer value representing any number of ounces
+#solution outputs the converted tons, pounds, and ounces represented by the input value of ounces
+
+ton_to_pounds = 2000
+ton_to_ounces = 32000
+pound_to_ounces = 16
+
+try:
+    number_ounces = int(input("Enter the number of ounces you want to convert: "))
+    
+    total_tons = number_ounces // ton_to_ounces
+    remainding_ounces_after_tons = number_ounces % ton_to_ounces
+    
+    total_pounds = remainding_ounces_after_tons // pound_to_ounces
+    remainding_ounces_after_pounds = remainding_ounces_after_tons % pound_to_ounces
+    
+    total_ounces = remainding_ounces_after_pounds
+    
+    print(f"Tons: {total_tons}\nPounds: {total_pounds}\nOunces: {total_ounces}")
+    
+except ValueError:
+    print("Please enter a positive whole number")
+    
