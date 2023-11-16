@@ -1,18 +1,18 @@
-predef_list = [4, -27, 15, 33, -10]
+frameworks = ["Django", "Flask", "CherryPy", "Bottle", "Web2Py", "TurboGears"]
 
-try:
-    value_check = int(input("Please enter a number: "))
+for i in range (len(frameworks)):
+    try:
+        i_value = int(input("Enter a number: "))
+        
+        frameworks_element = frameworks[i_value]
+        
+        print(frameworks_element)
+        
+        break
     
-    predef_list.sort()
-    
-    max_predef_list = predef_list[-1]
-    
-    print(max_predef_list)
-    
-    if value_check > max_predef_list:
-        print(f"Greater Than Max? True")
-    else:
-        print(f"Greater Than Max? False")
-    
-except ValueError:
-    print("Please enter whole numbers")
+    except EOFError:
+        pass
+    except IndexError:
+        print("Error") #The provided number(index) is out of range
+    except ValueError:
+        print("Please provide whole numbers")

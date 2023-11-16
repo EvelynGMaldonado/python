@@ -47,3 +47,28 @@ for i in range (len(frameworks)):
         print('Error') #Error: Index out of range
         break
 
+
+
+        #OR
+#use try block with exception "Error" when index value is not found in list
+#solution accepts an integer input
+#solution outputs the corresponding string value for the integer input
+
+frameworks = ["Django", "Flask", "CherryPy", "Bottle", "Web2Py", "TurboGears"]
+
+for i in range (len(frameworks)):
+    try:
+        i_value = int(input("Enter a number: "))
+        
+        frameworks_element = frameworks[i_value]
+        
+        print(frameworks_element)
+        
+        break
+    
+    except EOFError:
+        pass
+    except IndexError:
+        print("Error") #The provided number(index) is out of range
+    except ValueError:
+        print("Please provide whole numbers")
