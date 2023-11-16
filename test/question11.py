@@ -70,3 +70,50 @@ except ValueError:
     print("Please enter the correct name for item_name, and whole possitive numbers for item_quantity")
 
 
+    #OR
+#cost per item: <10 is full price, 10-20 (inclusive) is 5% discount, and 21+ is 10% discount
+#solution accepts a string input representing an item (dictionary key)
+#solution accepts an integer input representing the number of items to be purchased
+#solution outputs the item and total cost of purchase
+
+purchase = {"bananas": 1.85, "steak": 19.99, "cookies": 4.52, "celery": 2.81, "milk": 4.34}
+
+try:
+    item_name = str(input())
+    item_name_lower = item_name.lower().strip()
+    find_item = purchase[item_name_lower]
+    item_quantity = int(input())
+    
+    if item_quantity < 0:
+        print(f"You must enter positive whole numbers or zero if you bought 0 items of {item_name}")
+
+    elif item_quantity == 0:
+        print(f"{item_name_lower} $0.00")
+
+    elif 1 <= item_quantity < 10:
+        single_item_price = purchase[item_name_lower]
+        full_item_price = float(single_item_price * item_quantity)
+        total_purchase_cost = round(full_item_price, 2)
+        print(f"{item_name_lower} ${total_purchase_cost}")
+
+    elif 20 >= item_quantity >=10:
+        single_item_price = purchase[item_name_lower]
+        full_item_price = float(single_item_price * item_quantity)
+        purchase_discount = full_item_price *0.05
+        total_item_price = full_item_price - purchase_discount
+        total_purchase_cost = round(total_item_price, 2)
+        print(f"{item_name_lower} ${total_purchase_cost}")
+
+    elif item_quantity > 21:
+        single_item_price = purchase[item_name_lower]
+        full_item_price = float(single_item_price * item_quantity)
+        purchase_discount = full_item_price * 0.10
+        total_item_price = full_item_price - purchase_discount
+        total_purchase_cost = round(total_item_price, 2)
+        print(f"{item_name_lower} ${total_purchase_cost}")
+    else:
+        print("Something went wrong, please try again.")
+except KeyError:
+    print(f"{item_name_lower} does not exist. Please try again")
+except ValueError:
+    print("Please provide alphanumeric for name of the item and whole numbers for quantity of your chose item")
