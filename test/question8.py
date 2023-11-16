@@ -65,3 +65,37 @@ elif temperature_value_check >= 212:
     print("Boiling")
 else:
     print("the value is not recognized, please try again")
+
+    #OR
+#temperature >= 212, water state is "Boiling"
+#temperature (115, 211], water state is "Hot"
+#temperature (80, 115], water state is "Warm"
+#temperature (33, 80], water state is "Cold"
+#temperature < 33, water state is "Frozen"
+#temperature = 212, safety comment "Caution: Hot!"
+#temperature < 33, safety comment "Watch out for ice!"
+#solution accepts integer input representing a water temperature
+#solution outputs the water state and potential safety comment based on temperature
+
+
+try:
+    temperature_check = int(input("Please enter temperature value: "))
+    
+    if temperature_check >= 212:
+        print("Boiling") #212 #220
+        if temperature_check == 212:
+            print("Caution: Hot!")
+    elif 211 > temperature_check >= 115:
+        print("Hot") #115 #211 #200 #110
+    elif 115 > temperature_check >= 80:
+        print("Warm")
+    elif 80 > temperature_check >= 33:
+        print("Cold")
+    elif temperature_check < 33:
+        print(f"Frozen\nWatch out for ice!")
+    else:
+        print("Something went wrong. Please try again")
+    
+    
+except ValueError:
+    print("Please enter whole numbers")
