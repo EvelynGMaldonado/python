@@ -10,3 +10,27 @@ EXERCISE #1: CREATE A BUILT-IN FUNCTION THAT DETERMINES IF A NUMBER IS EVEN OR O
     d) define any functions used into the main function right before calling the main function at the end of the page.
 
 '''
+
+import logging
+import sys
+
+#log division by zero error to the log, the output is printed to the screen 
+def divideByZeroError(dividend, divisor):
+
+    logging.basicConfig(stream=sys.stdout,format='%(levelname)s:%(message)s')
+    
+    try:
+
+        quotient = dividend/divisor  
+        print (quotient)
+        
+    except Exception as e:
+
+        #logging error here, use str(e) as part of the output
+
+if __name__ == '__main__': 
+
+    dividend = int(input())
+    divisor = int(input())
+    
+    divideByZeroError(dividend,divisor)

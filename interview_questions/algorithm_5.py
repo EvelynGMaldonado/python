@@ -61,9 +61,9 @@ try:
     elif month_lower == "september" and 21 >= input_day >= 1:
         print("Summer")
     elif month_lower == "september" and 30 >= input_day >= 22:
-        print("Autum")
+        print("Autumn")
     elif month_lower == "october" and input_day in days_31:
-        print("Autum")
+        print("Autumn")
     elif month_lower == "november" and input_day in days_30:
         print("Autum")
     elif month_lower == "december" and 20 >= input_day >= 1 :
