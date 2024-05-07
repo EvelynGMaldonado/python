@@ -23,6 +23,7 @@ def divideByZeroError(dividend, divisor):
     except Exception as e:
 
         #logging error here, use str(e) as part of the output
+        logging.error("The exception that occurred is: " + str(e))
 
 if __name__ == '__main__': 
 
